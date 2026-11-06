@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Tecnico Ninja Black | Formatação, instalação e manutenção em um só kit digital</title>
+<meta name="description" content="Kit Tecnico Ninja Black: formatação normal e rápida por implantação, instalação de Windows Lites, Windows e programas atualizados, ferramentas de manutenção e backup. Produto 100% digital com entrega imediata.">
+<meta name="theme-color" content="#070b11">
+
+<!--
+  ============================================================================
+  PÁGINA DE VENDAS — KIT TECNICO NINJA BLACK
+  Produto 100% digital | Venda exclusiva pela Kiwify | Sem dados de contato
+  Arquivo 100% autônomo: CSS, imagens e scripts embutidos. Sem dependências externas.
+  ============================================================================
+  ANTES DE PUBLICAR, EDITE APENAS ISTO:
+  1) No <script> no fim do arquivo: substitua COLE_AQUI_O_LINK_DO_CHECKOUT_KIWIFY
+     pelo link de checkout do seu produto na Kiwify (Produtos > ... > Ver links).
+     Enquanto não substituir, aparece um aviso de demonstração no topo.
+  2) Se quiser exibir preço/parcelamento, insira na seção #promocao.
+  3) Publique este arquivo como index.html no seu domínio e cole a URL no campo
+     "Página de vendas" da Kiwify (esse campo aceita URL, não HTML).
+  Imagens de tela: assets/tela-programas.png e assets/tela-windows.png
+  (recortes das capturas enviadas, sem os rótulos de versão nas barras de título).
+  Originais mantidos em uploads/.
+  ============================================================================
+-->
+
+<style>
+  :root{
+    --bg:#070b11; --surface:#0d141e; --surface2:#111c29; --line:#1e2d3f;
+    --text:#eaf2fa; --muted:#9aadc2; --accent:#29d3ff; --accent2:#0b86d1;
+    --green:#2fd39a; --shadow:0 18px 50px rgba(0,0,0,.45);
+    --radius:16px; --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:800;color:var(--accent)}
+  .eyebrow:before{content:"";width:22px;height:2px;background:var(--accent);border-radius:2px}
+  h1,h2,h3{line-height:1.15;margin:0 0 16px;letter-spacing:-.02em}
+  h1{font-size:clamp(34px,5.6vw,62px);font-weight:850}
+  h2{font-size:clamp(27px,3.6vw,42px);font-weight:800}
+  h3{font-size:20px;font-weight:750}
+  p{margin:0 0 16px}
+  .muted{color:var(--muted)}
+  .grad{background:linear-gradient(100deg,var(--accent),#7ee8ff 55%,#b6f3ff);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  section{padding:84px 0;position:relative}
+  .section-head{max-width:760px;margin:0 auto 46px;text-align:center}
+  .section-head p{color:var(--muted);font-size:18px;margin:0}
+
+  /* aviso de demonstração (some quando o checkout for configurado) */
+  #devnotice{display:none;background:#3a2a08;border-bottom:1px solid #7a5a12;color:#ffe9b0;
+    font-size:13.5px;padding:11px 22px;text-align:center}
+  #devnotice b{color:#ffd166}
+
+  /* topo */
+  .topbar{position:relative;z-index:3;border-bottom:1px solid var(--line);background:rgba(7,11,17,.92)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:66px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
+  .brand .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:grid;place-items:center;color:#041018;font-size:16px;font-weight:900}
+  .brand small{display:block;font-weight:600;font-size:10px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+  .digital-tag{font-size:12px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:var(--green);
+    border:1px solid rgba(47,211,154,.4);background:rgba(47,211,154,.07);padding:8px 14px;border-radius:999px}
+
+  /* botões */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;
+    padding:14px 26px;border-radius:12px;font-weight:800;font-size:16px;letter-spacing:.01em;
+    transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease;cursor:pointer;border:1px solid transparent}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(100deg,var(--accent),#59d9ff);color:#04121b;
+    box-shadow:0 10px 30px rgba(41,211,255,.24)}
+  .btn-primary:hover{box-shadow:0 14px 38px rgba(41,211,255,.38)}
+  .btn-ghost{background:transparent;border-color:#2c4359;color:var(--text)}
+  .btn-ghost:hover{border-color:var(--accent)}
+  .btn-lg{min-height:62px;padding:16px 30px;font-size:17px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* hero */
+  .hero{padding:0;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:660px}
+  .hero-copy{padding:88px 60px 78px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+  .hero-copy .lead{font-size:19px;color:var(--muted);max-width:560px;margin:20px 0 26px}
+  .hero-art{position:relative;min-height:420px}
+  .hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-art:after{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,var(--bg) 0%,rgba(7,11,17,.55) 22%,rgba(7,11,17,0) 62%),
+               linear-gradient(0deg,rgba(7,11,17,.55),rgba(7,11,17,0) 45%)}
+  .hero-badge{position:absolute;right:26px;bottom:26px;z-index:2;background:rgba(9,16,25,.82);
+    border:1px solid rgba(47,211,154,.4);border-radius:14px;padding:14px 18px;backdrop-filter:blur(8px)}
+  .hero-badge b{display:block;font-size:22px;color:var(--green);line-height:1.1}
+  .hero-badge span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero-points{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:11px;color:#dce8f4;font-size:15.5px}
+  .hero-points li{display:flex;gap:11px;align-items:flex-start}
+  .hero-points li span{color:var(--accent);font-weight:900;flex:none}
+  .trust{margin-top:28px;font-size:13.5px;color:var(--muted);display:flex;gap:10px;align-items:center}
+  .trust i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);flex:none}
+
+  /* faixa */
+  .strip{border-bottom:1px solid var(--line);background:var(--surface)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:0;padding-bottom:0}
+  .strip div{padding:24px 18px;text-align:center;border-left:1px solid var(--line);font-size:14.5px;font-weight:650;letter-spacing:.02em}
+  .strip div:first-child{border-left:0}
+  .strip b{color:var(--accent)}
+
+  /* cards de recursos */
+  .features{background:radial-gradient(ellipse at 50% 0%,rgba(11,134,209,.11),transparent 60%)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .card{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+  .card .num{font-size:12px;letter-spacing:.18em;font-weight:800;color:var(--accent);display:block;margin-bottom:16px}
+  .card p{margin:0;color:var(--muted);font-size:15.5px}
+  .card h3{margin-bottom:10px}
+
+  /* telas do kit */
+  .screens{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+  .shot-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    display:flex;flex-direction:column}
+  .shot-window{border-bottom:1px solid var(--line);background:#101a26;padding:11px 16px;display:flex;align-items:center;gap:9px}
+  .shot-window i{width:10px;height:10px;border-radius:50%;display:block;background:#3c556c}
+  .shot-window i:first-child{background:#ff6b6b}
+  .shot-window i:nth-child(2){background:#ffd166}
+  .shot-window i:nth-child(3){background:#2fd39a}
+  .shot-window span{margin-left:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .shot-img{background:#0a1018;padding:22px;display:grid;place-items:center;min-height:300px}
+  .shot-img img, .shot-img video{width:100%;height:auto;border:1px solid #2b3c50;border-radius:8px;display:block}
+  .shot-img img{cursor:zoom-in;transition:transform .18s ease,box-shadow .18s ease;aspect-ratio:300/250;object-fit:cover}
+  .shot-img img:hover{transform:scale(1.015);box-shadow:0 14px 34px rgba(0,0,0,.55)}
+  .shot-text{padding:26px 26px 30px}
+  .shot-text p{font-size:15.5px;color:var(--muted);margin:0}
+  .hint{text-align:center;color:var(--muted);font-size:13.5px;margin:22px 0 0}
+  /* lightbox */
+  #lightbox{display:none;position:fixed;inset:0;z-index:50;background:rgba(3,6,10,.94);padding:24px;
+    align-items:center;justify-content:center;cursor:zoom-out}
+  #lightbox img{max-width:96vw;max-height:92vh;width:auto;border-radius:8px;box-shadow:0 20px 60px #000;cursor:default}
+  #lightbox .close{position:absolute;top:18px;right:26px;font-size:34px;color:var(--accent);line-height:1}
+
+  /* entrega digital */
+  .delivery .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    padding:6px 11px;border-radius:999px;background:rgba(41,211,255,.12);color:var(--accent);
+    border:1px solid rgba(41,211,255,.3);margin-bottom:18px}
+  .delivery .tag.green{background:rgba(47,211,154,.1);color:var(--green);border-color:rgba(47,211,154,.3)}
+  .delivery ul{list-style:none;padding:0;margin:14px 0 0}
+  .delivery li{color:var(--muted);font-size:15.5px;padding:7px 0 7px 22px;position:relative}
+  .delivery li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:900}
+  .note{margin-top:22px;padding:18px 22px;border:1px dashed #2c4359;border-radius:14px;
+    color:var(--muted);font-size:15px;background:rgba(255,255,255,.015)}
+
+  /* passos */
+  .steps{counter-reset:s;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps .grid-3{gap:26px}
+  .step .circle{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+    font-size:22px;font-weight:900;color:#04121b;background:linear-gradient(135deg,var(--accent),#59d9ff);margin-bottom:20px}
+  .step p{color:var(--muted);font-size:15.5px;margin:0}
+
+  /* público */
+  .who{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .who ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .who li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;background:var(--surface);
+    border:1px solid var(--line);border-radius:12px;font-size:16px}
+  .who li span{color:var(--green);font-weight:900;flex:none}
+
+  /* faq */
+  .faq{background:var(--surface);border-top:1px solid var(--line)}
+  .faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  details{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+  details[open]{border-color:rgba(41,211,255,.45)}
+  summary{cursor:pointer;font-weight:750;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";color:var(--accent);font-size:24px;font-weight:500;line-height:1;flex:none}
+  details[open] summary:after{content:"−"}
+  details p{margin:14px 0 0;color:var(--muted);font-size:15.5px}
+
+  /* promoção / CTA final */
+  #promocao{background:radial-gradient(ellipse at 50% 100%,rgba(11,134,209,.22),transparent 65%)}
+  .cta-box{max-width:860px;margin:0 auto;text-align:center;padding:54px 40px;border-radius:24px;
+    border:1px solid rgba(41,211,255,.28);background:linear-gradient(160deg,rgba(17,28,41,.95),rgba(9,15,23,.95));
+    box-shadow:0 24px 70px rgba(0,0,0,.5)}
+  .cta-box .btn-row{justify-content:center;margin-top:28px}
+  .cta-box .fine{margin:22px 0 0;font-size:13.5px;color:var(--muted)}
+
+  /* rodapé */
+  footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  footer a{color:var(--accent)}
+  footer .legal{max-width:760px;margin-top:18px;font-size:12px;line-height:1.6;color:#71869b}
+
+  .mobile-cta{display:none}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;min-height:0}
+    .hero-copy{padding:70px 0 46px;order:1}
+    .hero-art{order:2;min-height:300px}
+    .hero-art:after{background:linear-gradient(0deg,var(--bg),rgba(7,11,17,.15) 55%)}
+    .grid-3{grid-template-columns:1fr 1fr}
+    .grid-2,.who{grid-template-columns:1fr}
+    section{padding:64px 0}
+  }
+  @media(max-width:620px){
+    body{font-size:16px}
+    .grid-3,.grid-2,.strip .wrap{grid-template-columns:1fr}
+    .strip div{border-left:0;border-top:1px solid var(--line);padding:18px}
+    .strip div:first-child{border-top:0}
+    .digital-tag{display:none}
+    .cta-box{padding:38px 22px}
+    .btn{width:100%}
+    .btn-row{gap:10px}
+    .hero-points{font-size:15px}
+    .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;padding:11px 14px;
+      background:rgba(7,11,17,.96);border-top:1px solid var(--line);backdrop-filter:blur(10px)}
+    .mobile-cta .btn{min-height:50px;font-size:15px}
+    footer{padding-bottom:95px}
+  }
+</style>
+</head>
+<body>
+
+<div id="devnotice">⚙️ <b>Modo de demonstração:</b> substitua <b>CHECKOUT_KIWIFY</b> no fim do HTML pelo link de checkout do seu produto. Este aviso desaparece automaticamente.</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">K</span>
+      <span>Kit Tecnico Ninja Black<small>Kit técnico digital</small></span>
+    </div>
+    <span class="digital-tag">● 100% digital · acesso imediato</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap" style="position:relative">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Kit Tecnico Ninja Black · produto digital</span>
+          <h1>Tudo o que o técnico precisa, <span class="grad">em um só kit.</span></h1>
+          <p class="lead">O Kit Tecnico Ninja Black reúne formatação por implantação, Windows Lites, ferramentas de manutenção e backup, com Windows e programas atualizados. Pronto para o seu dia a dia de atendimento.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-lg cta-checkout" href="https://pay.kiwify.com.br/MEdmgUV">Comprar e baixar na hora →</a>
+            <a class="btn btn-ghost btn-lg" href="#kit">Ver o que vem no kit →</a>
+          </div>
+          <ul class="hero-points">
+            <li><span>✓</span> Formatação normal e rápida por implantação</li>
+            <li><span>✓</span> Instalação de Windows Lites e uso das suas ISOs personalizadas</li>
+            <li><span>✓</span> Ferramentas para manutenção e ferramenta de backup</li>
+          </ul>
+          <div class="trust"><i></i> Entrega digital automatizada: comprou, já começa a baixar.</div>
+        </div>
+        <div class="hero-art">
+          <img src="__HERO_DATA__" alt="Pendrive preto sobre fundo tecnológico azul, representando o kit digital">
+          <div class="hero-badge"><b>100% DIGITAL</b><span>Download imediato</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><b>Download imediato</b> após a compra</div>
+      <div><b>Windows e programas</b> atualizados</div>
+      <div>Compra direto pela <b>Kiwify</b></div>
+    </div>
+  </div>
+
+  <!-- O QUE VEM -->
+  <section class="features" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">O que você leva</span>
+        <h2>Um kit completo para formatar, instalar e manter</h2>
+        <p>Os recursos do Kit Tecnico Ninja Black, organizados para você usar direto no atendimento.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Formatação normal e rápida</h3>
+          <p>Dois jeitos de trabalhar: formatação normal ou rápida por implantação. Você escolhe o que cada máquina pede.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Windows Lites</h3>
+          <p>Instalação de Windows Lites também, para os casos em que um sistema mais enxuto é o melhor caminho.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Suas ISOs personalizadas</h3>
+          <p>Possibilidade de usar as suas próprias ISOs “LITE” personalizadas e outras variações que você já utiliza.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Ferramentas para manutenção</h3>
+          <p>Um conjunto de ferramentas de manutenção reunido no mesmo lugar, sem precisar garimpar utilitários a cada serviço.</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>Backup fora do comum</h3>
+          <p>Ferramenta extraordinária para backup — porque preservar os dados do cliente vem antes de qualquer formatação.</p>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <h3>Sempre atualizado</h3>
+          <p>Windows e programas atualizados no kit, para você começar o atendimento com material atual.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELAS DO KIT (imagens enviadas) -->
+  <section class="screens" id="telas">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Por dentro do kit</span>
+        <h2>Veja as telas na prática</h2>
+        <p>Duas capturas reais do ambiente do kit: o menu de programas e o painel de formatação e instalação de Windows.</p>
+      </div>
+      <div class="grid-2">
+        <article class="shot-card">
+          <div class="shot-window"><i></i><i></i><i></i><span>Programas pós-formatação</span></div>
+          <div class="shot-img">
+            <video class="shot-video" src="video2.mp4" controls autoplay muted loop playsinline preload="metadata">
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          </div>
+          <div class="shot-text">
+            <h3>Escolha os programas e execute tudo</h3>
+            <p>Lista com utilitários como K-Lite Mega Codec Pack, SumatraPDF, TeamViewer, VLC Player e WinRAR, além das linhas Microsoft Office 2013, 2016 e 2019 em várias edições. Selecione o que instalar em cada atendimento.</p>
+          </div>
+        </article>
+        <article class="shot-card">
+          <div class="shot-window"><i></i><i></i><i></i><span>Formatação e Windows</span></div>
+          <div class="shot-img"><img class="shot" src="img1.jpeg" alt="Tela de formatação rápida com edições de Windows 7, 8.1, 10 e 11 e painel de ferramentas"></div>
+          <div class="shot-text">
+            <h3>Formatação rápida, instalação normal e ferramentas</h3>
+            <p>Painel com diversas edições de Windows 7, 8.1, 10 e 11 — inclusive versões Lite —, instalação normal de Windows 7, 8.1, 10 e 11 e ferramentas como programas pós-formatação, Windows automático, personalização de usuário e estilo de partição de disco.</p>
+          </div>
+        </article>
+      </div>
+      <p class="hint">Clique na imagem para ampliar.</p>
+    </div>
+  </section>
+
+  <!-- ENTREGA DIGITAL -->
+  <section class="delivery" id="entrega">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Como você recebe</span>
+        <h2>100% digital, sem espera</h2>
+        <p>Arquivos para download, liberação automática e nada de envio físico.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="tag">Entrega automatizada</span>
+          <h3>Comprou, já começa a baixar</h3>
+          <p>A liberação do conteúdo acontece na hora da compra. Você não espera confirmação manual nem prazo de entrega.</p>
+          <ul><li>Acesso liberado logo após a compra</li><li>Download direto dos arquivos</li></ul>
+        </article>
+        <article class="card">
+          <span class="tag green">Somente digital</span>
+          <h3>Você monta a sua mídia de trabalho</h3>
+          <p>O produto é composto apenas por arquivos. Baixe, organize no seu computador e prepare a sua própria mídia para os atendimentos.</p>
+          <ul><li>Sem mídia física e sem envio pelos correios</li><li>Sem etapas extras para receber o produto</li></ul>
+        </article>
+      </div>
+      <p class="note">Preço, condições de pagamento e garantia são exibidos na finalização da compra, direto na Kiwify.</p>
+    </div>
+  </section>
+
+  <!-- PASSOS -->
+  <section class="steps">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Sem complicação</span>
+        <h2>Da compra ao primeiro atendimento</h2>
+      </div>
+      <div class="grid-3">
+        <div class="step"><div class="circle">1</div><h3>Garanta o seu acesso</h3><p>Finalize a compra pelo checkout da Kiwify, direto pelos botões desta página.</p></div>
+        <div class="step"><div class="circle">2</div><h3>Baixe os arquivos</h3><p>A entrega é automatizada: comprou, já começa a baixar. Sem intermediários, sem espera.</p></div>
+        <div class="step"><div class="circle">3</div><h3>Leve para o atendimento</h3><p>Prepare sua mídia de trabalho e use formatação, instalação, manutenção e backup no seu dia a dia.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÚBLICO -->
+  <section>
+    <div class="wrap who">
+      <div>
+        <span class="eyebrow">Para quem é</span>
+        <h2>Feito para quem vive de formatar e dar suporte</h2>
+        <p class="muted">Se você atende clientes, monta máquinas ou cuida do parque de computadores de uma empresa, o kit foi desenhado para o seu fluxo: abrir o atendimento, formatar, instalar, ajustar e proteger os dados.</p>
+        <p class="muted" style="margin-bottom:0">Menos tempo procurando ferramenta, mais tempo resolvendo o serviço.</p>
+      </div>
+      <ul>
+        <li><span>✓</span> Técnicos de informática e assistências técnicas</li>
+        <li><span>✓</span> Quem faz formatação e reinstalação de Windows com frequência</li>
+        <li><span>✓</span> Quem trabalha com Windows Lites e ISOs personalizadas</li>
+        <li><span>✓</span> Quem precisa de ferramentas de backup e manutenção à mão</li>
+        <li><span>✓</span> Quem quer várias edições de Windows no mesmo painel</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="duvidas">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h2>Antes de garantir o seu</h2>
+      </div>
+      <div class="faq-list">
+        <details open><summary>O produto é físico ou digital?</summary><p>100% digital. Você recebe apenas arquivos para download — não há envio de mídia física nem entrega pelos correios.</p></details>
+        <details><summary>O recebimento é imediato?</summary><p>Sim. A entrega é automatizada na hora da compra: comprou, já começa a baixar.</p></details>
+        <details><summary>Dá para instalar Windows Lites?</summary><p>Sim. O kit contempla instalação de Windows Lites e também a possibilidade de usar suas ISOs “LITE” personalizadas e semelhantes.</p></details>
+        <details><summary>Windows e programas vêm atualizados?</summary><p>Sim, o kit reúne Windows e programas atualizados, além de ferramentas para manutenção e uma ferramenta de backup.</p></details>
+        <details><summary>Quais são as formas de formatação?</summary><p>Formatação normal e rápida por implantação, para você escolher conforme a necessidade de cada máquina.</p></details>
+        <details><summary>Onde vejo preço, pagamento e garantia?</summary><p>Valores, condições de pagamento e garantia aparecem na finalização da compra, no checkout da Kiwify.</p></details>
+        <details><summary>Onde finalizo a compra?</summary><p>Direto pelo botão de compra desta página, que leva ao checkout da Kiwify. A venda é feita exclusivamente por lá.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="promocao">
+    <div class="wrap">
+      <div class="cta-box">
+        <span class="eyebrow">Promoção vigente</span>
+        <h2>Aproveite a promoção do Kit Tecnico Ninja Black</h2>
+        <p class="muted" style="font-size:18px;max-width:620px;margin:0 auto">Produto 100% digital, com entrega automatizada: comprou, já começa a baixar. Sem mídia física, sem espera.</p>
+        <!-- PREÇO: se quiser exibir valor/parcelamento, insira aqui. Ex.: <p class="price">R$ 000,00</p> -->
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg cta-checkout" href="https://pay.kiwify.com.br/MEdmgUV">Comprar e receber agora →</a>
+          <a class="btn btn-ghost btn-lg" href="#telas">Ver as telas do kit</a>
+        </div>
+        <p class="fine">Preço, condições de pagamento e garantia são exibidos na finalização da compra, na Kiwify.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom:10px"><span class="mark">K</span><span>Kit Tecnico Ninja Black<small>Kit técnico digital</small></span></div>
+      <div style="color:#71869b">Produto 100% digital · venda exclusiva pela Kiwify</div>
+    </div>
+    <div style="text-align:right">
+      <a href="#kit">O que vem no kit</a> · <a href="#telas">Telas</a> · <a href="#entrega">Entrega</a> · <a href="#duvidas">Dúvidas</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="legal">Este é um kit de ferramentas e procedimentos voltado a técnicos de informática. Windows, Windows Lites e demais programas citados pertencem aos respectivos proprietários; verifique as licenças aplicáveis antes de utilizá-los. Produto digital, sem entrega de mídia física. Preço, condições de pagamento e garantia são definidos na página de checkout da Kiwify.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a class="btn btn-primary cta-checkout" href="https://pay.kiwify.com.br/MEdmgUV">Comprar e baixar na hora →</a></div>
+
+<div id="lightbox" aria-hidden="true"><span class="close">×</span><img src="" alt="Imagem ampliada da tela do kit"></div>
+
+<script>
+  /* ============================================================
+     CONFIGURAÇÃO — substitua pelo link de checkout da Kiwify.
+     Sem dados de contato: todos os botões apontam para o checkout.
+     ============================================================ */
+  var CHECKOUT_KIWIFY = "https://pay.kiwify.com.br/MEdmgUV";
+  var botoes = document.querySelectorAll(".cta-checkout");
+  var configurado = /^https?:\/\//.test(CHECKOUT_KIWIFY);
+
+  if (configurado) {
+    for (var i = 0; i < botoes.length; i++) { botoes[i].href = CHECKOUT_KIWIFY; }
+  } else {
+    document.getElementById("devnotice").style.display = "block";
+    for (var j = 0; j < botoes.length; j++) {
+      botoes[j].addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("devnotice").scrollIntoView({behavior:"smooth", block:"center"});
+      });
+    }
+  }
+
+  /* Lightbox das capturas de tela */
+  var lb = document.getElementById("lightbox");
+  var lbImg = lb.querySelector("img");
+  document.querySelectorAll("img.shot").forEach(function (img) {
+    img.addEventListener("click", function () {
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      lb.style.display = "flex"; lb.setAttribute("aria-hidden", "false");
+    });
+  });
+  lb.addEventListener("click", function () { lb.style.display = "none"; lb.setAttribute("aria-hidden", "true"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { lb.style.display = "none"; lb.setAttribute("aria-hidden", "true"); }
+  });
+</script>
+
+</body>
+</html>

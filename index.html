@@ -89,15 +89,14 @@
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:660px}
   .hero-copy{padding:88px 60px 78px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
   .hero-copy .lead{font-size:19px;color:var(--muted);max-width:560px;margin:20px 0 26px}
-  .hero-art{position:relative;min-height:420px}
-  .hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-  .hero-art:after{content:"";position:absolute;inset:0;
-    background:linear-gradient(90deg,var(--bg) 0%,rgba(7,11,17,.55) 22%,rgba(7,11,17,0) 62%),
-               linear-gradient(0deg,rgba(7,11,17,.55),rgba(7,11,17,0) 45%)}
-  .hero-badge{position:absolute;right:26px;bottom:26px;z-index:2;background:rgba(9,16,25,.82);
-    border:1px solid rgba(47,211,154,.4);border-radius:14px;padding:14px 18px;backdrop-filter:blur(8px)}
-  .hero-badge b{display:block;font-size:22px;color:var(--green);line-height:1.1}
-  .hero-badge span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:40px 0}
+  .hero-video-box{width:100%;max-width:540px;position:relative;border-radius:16px;overflow:hidden;
+    box-shadow:0 22px 60px rgba(0,0,0,.7),0 0 0 1px rgba(41,211,255,.25);background:#0a1018}
+  .hero-video{width:100%;height:auto;display:block;border-radius:16px}
+  .hero-badge{position:absolute;top:16px;right:16px;z-index:2;background:rgba(9,16,25,.88);
+    border:1px solid rgba(47,211,154,.4);border-radius:12px;padding:8px 14px;backdrop-filter:blur(8px)}
+  .hero-badge b{display:block;font-size:16px;color:var(--green);line-height:1.1}
+  .hero-badge span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .hero-points{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:11px;color:#dce8f4;font-size:15.5px}
   .hero-points li{display:flex;gap:11px;align-items:flex-start}
   .hero-points li span{color:var(--accent);font-weight:900;flex:none}
@@ -197,9 +196,8 @@
   .mobile-cta{display:none}
   @media(max-width:900px){
     .hero-grid{grid-template-columns:1fr;min-height:0}
-    .hero-copy{padding:70px 0 46px;order:1}
-    .hero-art{order:2;min-height:300px}
-    .hero-art:after{background:linear-gradient(0deg,var(--bg),rgba(7,11,17,.15) 55%)}
+    .hero-copy{padding:70px 0 36px;order:1}
+    .hero-art{order:2;min-height:0;padding:0 0 44px}
     .grid-3{grid-template-columns:1fr 1fr}
     .grid-2,.who{grid-template-columns:1fr}
     section{padding:64px 0}
@@ -257,8 +255,10 @@
           <div class="trust"><i></i> Entrega digital automatizada: comprou, já começa a baixar.</div>
         </div>
         <div class="hero-art">
-          <img src="__HERO_DATA__" alt="Pendrive preto sobre fundo tecnológico azul, representando o kit digital">
-          <div class="hero-badge"><b>100% DIGITAL</b><span>Download imediato</span></div>
+          <div class="hero-video-box">
+            <video class="hero-video" src="hero-video.mp4" poster="hero-thumb.jpg" autoplay muted loop playsinline controls></video>
+            <div class="hero-badge"><b>100% DIGITAL</b><span>Download imediato</span></div>
+          </div>
         </div>
       </div>
     </div>
